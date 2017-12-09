@@ -10,7 +10,7 @@ echo "***************  qmake version ******************"
 qmake -query
 
 ln -s $BUILD_DIR/.apt/usr/include/x86_64-linux-gnu/qt5 $BUILD_DIR/.apt/usr/include/qt5
-
+ln -s $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/qt5/lib $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu
 
 source "$BIN_DIR/support/bash_functions.sh"
 heroku_buildpack_ruby_install_ruby "$BIN_DIR" "$BUILDPACK_DIR"
