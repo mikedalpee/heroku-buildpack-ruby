@@ -11,12 +11,14 @@ $:.unshift File.expand_path("../../../lib", __FILE__)
 require "language_pack"
 require "language_pack/shell_helpers"
 
+Kernel.puts "QT_DIR: #{ENV['QT_DIR']}"
+Kernel.puts "QMAKEPATH: #{ENV['QMAKEPATH]}"
+
 ENV['QT_DIR'] = "#{ENV[ARGV[0]]}/.apt/usr/lib/x86_64-linux-gnu/qt5/"
-ENV['QMAKEPATH] = "#{ENV['QT_DIR']}/mkspecs/linux-g++"
+ENV['QMAKEPATH'] = "#{ENV['QT_DIR']}/mkspecs/linux-g++"
 
-Kernel.puts ENV['QT_DIR']
-Kernel.puts ENV['QMAKEPATH]
-
+Kernel.puts "QT_DIR: #{ENV['QT_DIR']}"
+Kernel.puts "QMAKEPATH: #{ENV['QMAKEPATH]}"
 
 begin
   LanguagePack::Instrument.trace 'compile', 'app.compile' do
