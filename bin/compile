@@ -6,9 +6,6 @@ BIN_DIR=$(cd $(dirname $0); pwd)
 BUILDPACK_DIR=$(dirname $BIN_DIR)
 BUILD_DIR=$1
 
-echo "***************  qmake version ******************"
-qmake -query
-
 ln -s $BUILD_DIR/.apt/usr/include/x86_64-linux-gnu/qt5 $BUILD_DIR/.apt/usr/include/qt5
 ln -s $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/qt5/lib
 
