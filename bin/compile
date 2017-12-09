@@ -9,7 +9,7 @@ BUILD_DIR=$1
 echo "***************  qmake version ******************"
 qmake -query
 
-ln -s $BUILD_DIR/.apt/usr/include/x86_64-linux-gnu/qt5 $BUILD_DIR/.apt/user/include/qt5
+ln -s $BUILD_DIR/.apt/usr/include/x86_64-linux-gnu/qt5 $BUILD_DIR/.apt/usr/include/qt5
 
 
 source "$BIN_DIR/support/bash_functions.sh"
