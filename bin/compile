@@ -6,8 +6,7 @@ BIN_DIR=$(cd $(dirname $0); pwd)
 BUILDPACK_DIR=$(dirname $BIN_DIR)
 
 echo "***************  qmake version ******************"
-qmake -query QT_VERSION
-qmake -query QT_INSTALL_PREFIX
+qmake -query
 
 
 source "$BIN_DIR/support/bash_functions.sh"
