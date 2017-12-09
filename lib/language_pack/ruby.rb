@@ -613,9 +613,7 @@ WARNING
             "NOKOGIRI_USE_SYSTEM_LIBRARIES" => "true",
             "JAVA_HOME"                     => noshellescape("#{pwd}/$JAVA_HOME"),
             "BUNDLE_DISABLE_VERSION_CHECK"  => "true",
-            "QT_DIR"                        => "#{ARGV[0]}/.apt/usr/lib/x86_64-linux-gnu/qt5/",
-            "QMAKEPATH"                     => "#{ARGV[0]}/.apt/usr/lib/x86_64-linux-gnu/qt5/",
-            "QMAKESPEC"                     => "#{ARGV[0]}/.apt/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/"
+            "INCLUDE_PATH"                  => "#{ARGV[0]}/.apt/usr/include:#{ARGV[0]}/.apt/usr/include/x86_64-linux-gnu/qt5:#{ENV['INCLUDE']}"
           }
           env_vars["BUNDLER_LIB_PATH"] = "#{pwd}/#{bundler_path}/lib" if ruby_version.ruby_version == "1.8.7"
           puts "Running: #{bundle_command}"
