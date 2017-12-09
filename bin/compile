@@ -6,8 +6,7 @@ BIN_DIR=$(cd $(dirname $0); pwd)
 BUILDPACK_DIR=$(dirname $BIN_DIR)
 BUILD_DIR=$1
 export QT_DIR=$BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/qt5/
-export QMAKESPEC=$QT_DIR/mkspecs/linux-g++/qmake.conf
-cat $QMAKESPEC
+export QMAKESPEC=$QT_DIR/mkspecs/linux-g++
 
 source "$BIN_DIR/support/bash_functions.sh"
 heroku_buildpack_ruby_install_ruby "$BIN_DIR" "$BUILDPACK_DIR"
