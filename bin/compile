@@ -11,6 +11,7 @@ qmake -query QT_MAJOR_VERSION
 qmake -query QT_MINOR_VERSION
 qmake -set QT_MAJOR_VERSION 5
 qmake -set QT_MINOR_VERSION 9
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -v
 
 
 source "$BIN_DIR/support/bash_functions.sh"
