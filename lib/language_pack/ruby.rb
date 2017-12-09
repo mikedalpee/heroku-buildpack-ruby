@@ -612,7 +612,7 @@ WARNING
             "RUBYOPT"                       => syck_hack,
             "NOKOGIRI_USE_SYSTEM_LIBRARIES" => "true",
             "JAVA_HOME"                     => noshellescape("#{pwd}/$JAVA_HOME"),
-            "BUNDLE_DISABLE_VERSION_CHECK"  => "true")
+            "BUNDLE_DISABLE_VERSION_CHECK"  => "true"
           }
           env_vars["BUNDLER_LIB_PATH"] = "#{pwd}/#{bundler_path}/lib" if ruby_version.ruby_version == "1.8.7"
           puts "Running: #{bundle_command}"
