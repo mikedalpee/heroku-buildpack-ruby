@@ -8,6 +8,8 @@ BUILD_DIR=$1
 
 ln -s $BUILD_DIR/.apt/usr/include/x86_64-linux-gnu/qt5 $BUILD_DIR/.apt/usr/include/qt5
 ln -s $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/qt5/lib
+#ln -s $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/mesa/libGL.so.1 $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/libGL.so.1
+
 
 source "$BIN_DIR/support/bash_functions.sh"
 heroku_buildpack_ruby_install_ruby "$BIN_DIR" "$BUILDPACK_DIR"
