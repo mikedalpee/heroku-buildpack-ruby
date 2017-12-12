@@ -8,7 +8,9 @@ BUILD_DIR=$1
 
 ln -s $BUILD_DIR/.apt/usr/include/x86_64-linux-gnu/qt5 $BUILD_DIR/.apt/usr/include/qt5
 ln -s $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/qt5/lib
-#ln -s $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/mesa/libGL.so.1 $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/libGL.so.1
+rm $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/libGL.so
+cp -av $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/mesa/* $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/
+rm $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/ld.so.conf
 
 
 source "$BIN_DIR/support/bash_functions.sh"
